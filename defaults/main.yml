@@ -1,0 +1,16 @@
+remote_syslog_package_url: https://github.com/papertrail/remote_syslog2/releases/download/v0.18/remote-syslog2_0.18_amd64.deb
+remote_syslog_package_shasum: 17a60a75bc60cc62c2664a44dec3fef50cb61c5ee8adf6be8d49f3267657e6fe
+
+papertrail_host: ""
+papertrail_port: 0
+papertrail_protocol: ""
+
+remote_syslog_additional_files: []
+remote_syslog_files:
+  - /var/log/syslog
+  - /var/log/auth.log
+  - /var/log/dmesg
+  - /var/log/apt/history.log
+  - /var/log/fsck/checkfs
+  - /var/log/fsck/checkroot
+  - /var/log/unattended-upgrades/unattended-upgrades.log

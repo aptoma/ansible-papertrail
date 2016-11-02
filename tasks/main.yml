@@ -1,0 +1,28 @@
+- name: Download package
+  get_url:
+    url: "{{ remote_syslog_package_url }}"
+    checksum: "sha256:{{ remote_syslog_package_shasum }}"
+    dest: /tmp/remote_syslog.deb
+    owner: root
+    group: root
+    mode: 0700
+  
+- name: Install package
+  apt:
+    deb: /tmp/remote_syslog.deb
+    state: present
+
+- name: Ensure remote_syslog is running
+  service:
+    name: remote_syslog
+    state: running
+
+- name: Set config file
+  template:
+    src: log_files.yml.j2
+    dest: /etc/log_files.yml
+    owner: root
+    group: root
+    mode: 0633
+  notify:
+    - Reload remote_syslog

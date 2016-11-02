@@ -1,0 +1,11 @@
+galaxy_info:
+  description: Installs and configures remote_syslog for export to PaperTrail
+  min_ansible_version: 2.2
+  github_branch: master
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all

@@ -1,0 +1,12 @@
+files: 
+{% for item in remote_syslog_files %}
+  - {{ item }}
+{% endfor %}
+{% for item in remote_syslog_additional_files %}
+  - {{ item }}
+{% endfor %}
+destination:
+  host: {{ papertrail_host }}
+  port: {{ papertrail_port }}
+  protocol: {{ papertrail_protocol }}
+  
