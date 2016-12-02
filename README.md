@@ -7,11 +7,11 @@ Installs and configures `remote_syslog` for export to PaperTrail.
 
 ##### Package
 
-The default settings will install `remote_syslog` version 0.18.
+The default settings will install `remote_syslog` version 0.19.
 
 ```yaml
-remote_syslog_package_url: https://github.com/papertrail/remote_syslog2/releases/download/v0.18/remote-syslog2_0.18_amd64.deb
-remote_syslog_package_shasum: 17a60a75bc60cc62c2664a44dec3fef50cb61c5ee8adf6be8d49f3267657e6fe
+remote_syslog_package_url: https://github.com/papertrail/remote_syslog2/releases/download/v0.19/remote-syslog2_0.19_amd64.deb
+remote_syslog_package_shasum: fd98bb5daf599c6f167edcb65a1861b007a16a61691dfc4796bfe2dddae8813f
 ```
 
 To override, you'll first need to create a checksum for the package.

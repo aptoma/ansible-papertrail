@@ -6,7 +6,7 @@
     owner: root
     group: root
     mode: 0700
-  
+
 - name: Install package
   apt:
     deb: /tmp/remote_syslog.deb
