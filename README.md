@@ -79,3 +79,18 @@ Run `ansible-galaxy install -r {your role file}` then add it to your roles list:
       papertrail_host: ""
       # Etc
 ```
+
+### Testing
+
+Install depedencies
+
+  pip install molecule
+  pip install python-vagrant
+
+Run test
+
+  molecule test
+
+SSH to vagrant created by molecule
+
+  molecule login
