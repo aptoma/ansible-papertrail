@@ -15,7 +15,7 @@
 - name: Ensure remote_syslog is running
   service:
     name: remote_syslog
-    state: running
+    state: started
 
 - name: Set config file
   template:
