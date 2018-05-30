@@ -1,0 +1,14 @@
+---
+- name: Download package
+  get_url:
+    url: "{{ remote_syslog_deb_url }}"
+    checksum: "sha256:{{ remote_syslog_deb_shasum }}"
+    dest: /tmp/remote_syslog.deb
+    owner: root
+    group: root
+    mode: 0700
+
+- name: Install package
+  apt:
+    deb: /tmp/remote_syslog.deb
+    state: present

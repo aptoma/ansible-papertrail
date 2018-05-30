@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  become: true
   roles:
-    - role: ansible-papertrail
+    - role: papertrail
       papertrail_host: "logs.papertrailapp.com"
