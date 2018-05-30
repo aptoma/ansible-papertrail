@@ -1,5 +1,8 @@
-remote_syslog_package_url: https://github.com/papertrail/remote_syslog2/releases/download/v0.19/remote-syslog2_0.19_amd64.deb
-remote_syslog_package_shasum: fd98bb5daf599c6f167edcb65a1861b007a16a61691dfc4796bfe2dddae8813f
+remote_syslog_deb_url: https://github.com/papertrail/remote_syslog2/releases/download/v0.20/remote-syslog2_0.20_amd64.deb
+remote_syslog_deb_shasum: f3ec276e492043c967ba39173658404ec0e164ddea6b726b4a7529153e08b319
+
+remote_syslog_rpm_url: https://github.com/papertrail/remote_syslog2/releases/download/v0.20/remote_syslog2-0.20-1.x86_64.rpm
+remote_syslog_rpm_shasum: 696928f8149f4cfcf76eb5744508fbd54182c8bc3fabbac1145266c7f87a09a1
 
 papertrail_host: ""
 papertrail_port: 0

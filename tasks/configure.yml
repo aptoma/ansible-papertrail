@@ -1,0 +1,15 @@
+---
+- name: Ensure remote_syslog is running
+  service:
+    name: remote_syslog
+    state: started
+
+- name: Set config file
+  template:
+    src: log_files.yml.j2
+    dest: /etc/log_files.yml
+    owner: root
+    group: root
+    mode: 0633
+  notify:
+    - Reload remote_syslog

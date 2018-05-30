@@ -1,0 +1,14 @@
+---
+- name: Download package
+  get_url:
+    url: "{{ remote_syslog_rpm_url }}"
+    checksum: "sha256:{{ remote_syslog_rpm_shasum }}"
+    dest: /tmp/remote_syslog.rpm
+    owner: root
+    group: root
+    mode: 0700
+
+- name: Install package
+  yum:
+    name: /tmp/remote_syslog.rpm
+    state: present
