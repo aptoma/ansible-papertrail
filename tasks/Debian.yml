@@ -1,12 +1,27 @@
 ---
-- name: Download package
+- name: Download package (x86_64)
   get_url:
-    url: "{{ remote_syslog_deb_url }}"
-    checksum: "sha256:{{ remote_syslog_deb_shasum }}"
+    url: "{{ remote_syslog_deb_x86_64_url }}"
+    checksum: "sha256:{{ remote_syslog_deb_x86_64_shasum }}"
     dest: /tmp/remote_syslog.deb
     owner: root
     group: root
     mode: 0700
+  when: ansible_architecture == "x86_64"
+
+- name: Download package (aarch64)
+  get_url:
+    url: "{{ remote_syslog_deb_aarch64_url }}"
+    checksum: "sha256:{{ remote_syslog_deb_aarch64_shasum }}"
+    dest: /tmp/remote_syslog.deb
+    owner: root
+    group: root
+    mode: 0700
+  when: ansible_architecture == "aarch64"
+
+- name: Add workaround for armhf packages
+  command: dpkg --add-architecture armhf
+  when: ansible_architecture == "aarch64"
 
 - name: Install package
   apt:
